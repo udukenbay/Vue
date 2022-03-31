@@ -9,7 +9,10 @@
     </head>
     <body>
         <div id="app">
-            <input type="text" v-on:input="handleChange">
+            <input type="text" 
+                v-on:input="handleChange"
+                v-on:focus="handleChange"
+            >
             <h1>{{ title }}</h1>
         </div>
         <script src="main.js"></script>
