@@ -16,19 +16,17 @@
             <h1>{{ title.split('').reverse().join('') }}</h1><!-- взяли наш заголовок превратили его в массив с помощью split, развернули с reverse и обратно склеили join -->
             <h1>{{ title.split('').reverse().join('') }}</h1>
             <h1>{{ title.split('').reverse().join('') }}</h1>
-            <h1>{{ title.split('').reverse().join('') }}</h1>
 
             <h2>{{ reverseTitle(title) }}</h2>
             <h2>{{ reverseTitle(title) }}</h2>
-            <h2>{{ reverseTitle(title) }}</h2>
-            <h2>{{ reverseTitle(title) }}</h2>
-            <h2>{{ reverseTitle(title) }}</h2>
 
-            <h3>{{ reversedTitle }}</h3>
             <h3>{{ reversedTitle }}</h3>
             <h3>{{ reversedTitle }}</h3>
             <!-- с computed properties свойство выполняется только 1 раз и затем кэшируется результат -->
             <!-- В последсвии когда Vue будет встречать такое свойство, он будет подставлять туда уже закэшированный результат -->
+            
+            <h1>{{ title }}</h1>
+            <button @click="setupTitle">Вывести</button>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
