@@ -9,10 +9,12 @@
     <body>
         <div id="app">
             <div class="outer" 
-                @click.capture="handleOuter">
+                @click="handleOuter">
                 <!-- capture - это модификатор, который пишется после событии -->
                 внешний
-                <div class="inner" @click="handleInner">Внутренний</div>
+                <div class="inner" 
+                    @click.stop="handleInner">Внутренний</div>
+                    <!-- click.stop -->
                 <a href="">ссылка</a>
             </div>
         </div>
