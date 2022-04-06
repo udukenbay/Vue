@@ -19,9 +19,15 @@
                     focus: handleChange
                 }"
             >
+            <button @click="onChange('One', $event)
+            ">Изменить</button>
+            <button @click="onChange('Two', $event)
+            ">Изменить</button>
             <!-- <h1 v-pre> {{title}} </h1> -->
             <h1 v-text="title" v-once></h1>
-            <h1 v-text="title"></h1>
+            <h1>
+                {{example.title}}, был клик в 
+                x= {{example.coordX}}</h1>
             <h1 v-text="title"></h1>
             <h1 v-text="title"></h1>
             <h1 v-text="title"></h1>
