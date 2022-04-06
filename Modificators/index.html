@@ -8,16 +8,31 @@
     </head>
     <body>
         <div id="app">
+            <input type="text" 
+                @keydown.alt.enter="handleKeydown">
             <div class="outer" 
-                @click="handleOuter">
+                @click.passive="handleOuter">
                 <!-- capture - это модификатор, который пишется после событии -->
+                <!-- .self -->
                 внешний
                 <div class="inner" 
-                    @click.stop="handleInner">Внутренний</div>
+                    @click.once="handleInner">Внутренний</div>
                     <!-- click.stop -->
-                <a href="">ссылка</a>
+                    <!-- .once -->
+                <a @click.prevent.once href="">ссылка</a>
             </div>
         </div>
+        <!-- List of Modificators:
+        .capture
+        .stop
+        .self
+        .once
+        .prevent = preventDefault()
+        .passive (mobile version)
+        .left .right .middle (mouseClick)
+        .keydown.enter (.tab .delete .esc .backspace .space .up .down .left .right .ctrl .alt .meta-win|Command 
+        Комбинации: .alt.enter  .alt.67=alt+s)
+         -->
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="main.js"></script>

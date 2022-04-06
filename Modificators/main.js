@@ -12,6 +12,9 @@ new Vue({
         },
         handleInner(e) {
             console.log('inner');
+        },
+        handleKeydown(e) {
+            console.log(e.target.value);
         }
     }
 });
