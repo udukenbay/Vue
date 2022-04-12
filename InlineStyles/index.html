@@ -4,21 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>watch-vue-js</title>
-        <style>
-            .active {
-                background-color: lightblue;
-            }
-        </style>
+        <title>inline-styles-in-vuejs</title>
     </head>
     <body>
         <div id="app">
-            <h1 :class="changed ? 'active' : '' ">{{ title }}</h1>
-            <h2 :class="{active : changed}">{{ title }}</h2>
-            <h3 :class="[{active:changed}, errorClass]">{{ title }}</h3>
+            <h1 :style="styles">{{ title }}</h1>
+            <h2 :style="{color: fontNewColor, backgroundColor: backgroundNewColor}">{{ title }}</h2>
 
-
-            <button @click="setupTitle">Вывести</button>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
