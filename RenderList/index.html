@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>v-if-in-vuejs</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- array -->
+            <p>Array</p>
+            <ul>
+                <li v-for="(elem, index) in arr">
+                    <h3>
+                        {{elem}}
+                    </h3>
+                    <p>
+                        {{index}}
+                    </p>
+                </li>
+            </ul>
+            
+            <!-- object -->
+            <p>Object</p>
+            <ul>
+                <li v-for="(val, prop) in obj">
+                    <h3>
+                        {{prop}} :: {{val}}
+                    </h3>
+                </li>
+            </ul>
+
+            <!-- array object -->
+            <p>Array object</p>
+            <ul>
+                <li 
+                    v-for="member in arrObj"
+                    v-if="member.salary < 1500"
+                >
+                    <h3>
+                        name: {{member.name}}
+                    </h3>
+                    <h4>
+                        salary: {{member.salary}}
+                    </h4>
+                </li>
+            </ul>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
