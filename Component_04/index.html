@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>v-if-in-vuejs</title>
+    </head>
+    <body>
+        <div id="app">
+            <hello 
+                :key="name" 
+                v-for="name in names"
+                :name="name"
+            >
+                <p>slot slot</p>
+                <p>gfdg gfd</p>
+            </hello>
+        </div>
+
+        <!-- parent component -->
+        <script type="text/x-template" id="hello">
+            <div>
+                <h1>Hello {{name}}!</h1>
+                <slot></slot>
+                <!-- slot - можно передавать разметки с помощью зарезервинованный компонент slot -->
+                
+                <!-- child component -->
+                <h3>Hello {{title}}!</h3>
+                <child @clickEmitted="changeTitle"></child>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="child">
+            <button @click="handleClick">Оповестить</button>
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
