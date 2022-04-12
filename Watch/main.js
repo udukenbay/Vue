@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: {
         title: 'Hello World!!!',
-        status: ""
+        changed: false
     },
     methods: {
         setupTitle() {
@@ -12,7 +12,7 @@ new Vue({
     watch: {
         title(value) {
             // ввиде методов написать те свойства за которыми хотим следить - у нас это title
-            this.status = 'changed'
+            this.changed = true
         }        
     }
 });

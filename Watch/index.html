@@ -5,11 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>innerDiv-vue-js</title>
+        <style>
+            .active {
+                background-color: lightblue;
+            }
+        </style>
     </head>
     <body>
         <div id="app">
-            <h1>{{ title }}</h1>
-            <h2>{{ status }}</h2>
+            <h1 :class="changed ? 'active' : '' ">{{ title }}</h1>
+            <h2 :class="{active : changed}">{{ title }}</h2>
+
             <button @click="setupTitle">Вывести</button>
         </div>
 
